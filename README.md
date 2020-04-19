@@ -22,18 +22,18 @@ database, we want to ask the DATABASE to do as much of that work as possible.
 That's what it's good at. That's what it likes to do. It has sacrificed some
 capabilities in order to do other capabilities ***extremely well***.
 
-If you use this code:
+Take a look at this code:
 
 ```ruby
 doctors = Doctor.all
 first_six_drs = doctors[0..5]
 ```
 
-You will get you six doctors by using _RUBY_ to "section off" six doctors using
-Ruby's range method (`[]`). But under the covers we asked the database for
-**all** the doctors and then took six of them. Wouldn't it make more sense to
-ask the database to get us ***only*** six `Doctor`s in the first place? That's
-what the following code does:
+Here we are using _RUBY_ to "section off" six doctors by using Ruby's range 
+method (`[]`). But under the covers we asked the database for **all** the 
+doctors and then took six of them. Wouldn't it make more sense to ask the 
+database to get us ***only*** six `Doctor`s in the first place? That's what 
+the following code does:
 
 ```ruby
 Doctor.limit(6).to_a
@@ -43,8 +43,8 @@ Functions like `limit` are provided by the "AREL" engine that's built into
 ActiveRecord. AREL stands for "A Relational Algebra." If that sounds like some
 complex, awesome Mathematics and set theory stuff, it is! Fortunately, we don't
 have to get advanced degrees in mathematics to benefit from this engine. AREL
-lets us query the database, via ActiveRecord in an object-oriented-looking way
-***but*** that uses as much of the database's power as possible.
+lets us query the database, via ActiveRecord, using code that is object-oriented
+looking ***but*** that uses as much of the database's power as possible.
 
 ## Use ActiveRecord's AREL Library To Build Optimized Queries
 
