@@ -70,5 +70,3 @@ your queries more efficient can literally speed up your applications 1000x!
 * [ThoughtBot](http://thoughtbot.com/) - [Using Arel to Compose SQL Queries](http://robots.thoughtbot.com/using-arel-to-compose-sql-queries)
 
 [ad]: https://guides.rubyonrails.org/active_record_querying.html
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/arel-lab' title='AREL Lab'>AREL Lab</a> on Learn.co and start learning to code for free.</p>
